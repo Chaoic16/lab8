@@ -7,12 +7,103 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-      <%= render 'layouts/header' %>
-      <section class = "round" >
-          <%= yield %>
-      </section>
-      <%= render 'layouts/footer' %>
-  </div>
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+	<!--------------------------------------------------------------------------- TOP ---------------------------------------------------------------------------->
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+	<div id="Top"> 
+		<!---------------------------------- Left banner ---------------------------------->
+		<div id="leftBanner">
+			<%= render 'layouts/header' %>
+			<!---------------------------------- Right Banner ---------------------------------->
+			<div id="rightBanner">
+				<center><h3><script type="text/javascript"> 
+					var currentTime = new Date()
+					var month = currentTime.getMonth() + 1
+					var day = currentTime.getDate()
+					var year = currentTime.getFullYear()					
+					var hours = currentTime.getHours()
+					var minutes = currentTime.getMinutes()
+					if (minutes < 10)
+						minutes = "0" + minutes
+					document.write(month + "/" + day + "/" + year + " \| " + hours + ":" + minutes + " ")
+					if(hours > 11)
+						document.write("PM")
+					else
+						document.write("AM")
+				</script></h3></center>
+				<hr />
+				<form name="login" id="login">
+					<table>
+						<tr>
+							<td> login name </td>					
+							<td> <input type="text" name="firstname" id="firstname" size="25" /> </td>
+						</tr>
+						<tr>
+							<td> password </td>
+							<td> <input type="text" name="middlename" id="middlename" size="25" /> </td>
+						</tr>
+					</table>
+					<label>| <font color="blue"> Registry </font><lable> | </lable></label><font color="blue"> forgot password </font>
+				</form>				
+			</div> <!-- End Right Banner -->			
+		</div> <!-- End Left Banner -->		
+	</div> <!-- End Top -->
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+	<!-------------------------------------------------------------------------- Center -------------------------------------------------------------------------->
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+	<div id="Center">
+		<!---------------------------------- Left Section ---------------------------------->
+		<div id="LeftSection">
+			<center><h3>Menu</h3></center>
+			<hr /><br />
+			<center><b><font color="blue"> News </font></b></center>
+			<center><b><font color="blue"> Games List </font></b></center>
+			<center><b><font color="blue"> Developer Teams List </font></b></center>
+			<center><b><font color="blue"> Publishers List </font></b></center>
+			<center><b><font color="blue"> Platforms List </font></b></center>
+			<center><b><font color="blue"> Feedback </font></b></center>
+			<center><b><font color="blue"> Contact us </font></b></center>			
+			<br /><hr /><br />
+			<table>
+				<tr>
+					<td>
+						<center><label><b> Search </b></label></center>
+					</td>
+					<td>
+						<center><label><b> By: </b></label></center>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="search" id="search" size="10" />
+					</td>
+					<td>
+						<select name="search"> <option>Game Title</option> <option>Developer Team</option> <option>Publisher</option> <option>Platform</option> </select>
+					</td>
+				</tr>
+			</table>
+		</div> <!-- end Left Section -->
+		<!---------------------------------- Main ---------------------------------->
+		<div id="main">
+			<br /><center><h1> Welcome to My Gaming Page!</h1></center><br /><hr />
+			<center><h3>News/Annoucement</h3></center>
+			<center><p align="left" id="para"><br />
+				<b>Saturday, October 29, 2011</b>
+				<br /><br />
+				Welcome to my site page!  Today is the first day that this web site is up running.  This website is still  under construction.
+				I am looking forward fully finish this website while upgrading and expanding this website through time.
+				<br /><br />
+			</p></center>
+		</div> <!-- end Main -->
+	</div> <!-- end Center -->
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+	<!-------------------------------------------------------------------------- Bottom -------------------------------------------------------------------------->
+	<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+	<div id="Bottom">
+		<br /><br />
+		<center>
+			<%= render 'layouts/footer' %>
+		</center>
+	</div> <!-- end Bottom -->
 </body>
 </html>

@@ -1,0 +1,77 @@
+body {
+	background-color: silver;
+}
+#para {
+	margin-left: 100px;
+	margin-right: 100px;
+	border:thin;
+	border-style: ridge;
+
+}
+#Top{
+	background-color: silver;
+	margin: auto;
+	width: 1430px;
+	height: 165px;
+	position: relative;
+	border-width: 5px;
+	border-style: groove;
+}
+#leftBanner{
+	background-image:url('banner1.jpg');
+	background-position: left;
+	height: 165px;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 200px;
+}
+#rightBanner{
+	float: right;
+	background-color: #FFFF99;
+	width: 300px;
+	height: 165px;
+	border-top-width: 0px;
+	border-left-width: 5px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-style: groove;
+}
+#Center{
+	background-color: white;
+	margin: auto;
+	width: 1430px;
+	height: 900px;
+	position: relative;
+	border-top-width: 0px;
+	border-left-width: 5px;
+	border-right-width: 5px;
+	border-bottom-width: 0px;
+	border-style: groove;
+}
+#LeftSection{
+	float: left;
+	background-color: #999999;
+	width: 230px;
+	height: 900px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 5px;
+	border-bottom-width: 0px;
+	border-style: groove;
+}
+#main{
+	float: left;
+	background-color: white;
+	width: 1195px;
+	height: 900px;
+}
+#Bottom{
+	background-color: #FF9966;
+	margin: auto;
+	width: 1430px;
+	height: 100px;
+	position: relative;
+	border-width: 5px;
+	border-style: groove;
+}
