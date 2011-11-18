@@ -56,13 +56,14 @@
 		<div id="LeftSection">
 			<center><h3>Menu</h3></center>
 			<hr /><br />
-			<center><b><font color="blue"> News </font></b></center>
-			<center><b><font color="blue"> Games List </font></b></center>
-			<center><b><font color="blue"> Developer Teams List </font></b></center>
-			<center><b><font color="blue"> Publishers List </font></b></center>
-			<center><b><font color="blue"> Platforms List </font></b></center>
-			<center><b><font color="blue"> Feedback </font></b></center>
-			<center><b><font color="blue"> Contact us </font></b></center>			
+			<center><b> <%= link_to "News", root_path %> </b></center>
+			<center><b> <%= link_to "Games List", "#" %> </b></center>
+			<center><b> <%= link_to "Developer Teams List", "#" %> </b></center>
+			<center><b> <%= link_to "Publishers List", "#" %> </b></center>
+			<center><b> <%= link_to "Platforms List", "#" %> </b></center>
+			<center><b> <%= link_to "Feedback", "#" %> </b></center>
+			<center><b> <%= link_to "Contact us", contact_path %> </b></center>
+			<center><b> <%= link_to "About us", about_path %> </b></center>
 			<br /><hr /><br />
 			<table>
 				<tr>
@@ -85,15 +86,7 @@
 		</div> <!-- end Left Section -->
 		<!---------------------------------- Main ---------------------------------->
 		<div id="main">
-			<br /><center><h1> Welcome to My Gaming Page!</h1></center><br /><hr />
-			<center><h3>News/Annoucement</h3></center>
-			<center><p align="left" id="para"><br />
-				<b>Saturday, October 29, 2011</b>
-				<br /><br />
-				Welcome to my site page!  Today is the first day that this web site is up running.  This website is still  under construction.
-				I am looking forward fully finish this website while upgrading and expanding this website through time.
-				<br /><br />
-			</p></center>
+			<%= yield %>
 		</div> <!-- end Main -->
 	</div> <!-- end Center -->
 	<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
