@@ -1,1 +1,36 @@
-CS 4413 Web Technology lab 8 by David Salazargem install heroku
+|---------------------------------------------|
+|CS 4413 Web Technology Lab 8 by David Salazar|
+|---------------------------------------------|
+
+Links to your Heroku sites.
+
+https://github.com/Chaoic16/lab8
+
+Links to your Heroku sites.
+
+http://fierce-night-2950.herokuapp.com/
+
+----------------------------------------------
+
+Links to routed pages with appropriate URLs 
+
+(NOTE: I am not entirely sure what this is asking for?)
+
+https://github.com/Chaoic16/lab8/tree/master/config
+
+https://api.heroku.com/myapps/fierce-night-2950
+
+----------------------------------------------
+
+A description of the project.
+
+This web page is to bring database with information about games, publishers, develop teams, and platforms for customers to learn about each of them.  
+And at the same time, customers will be able to rate and comments on any games that is shown in list.
+
+----------------------------------------------
+
+A paragraph indicating what you think is required for an initial release that has minimum functionality needed to be useful.
+
+Currently I have working links on left section menu for news, about us, and contact us.  And to have a useful minimum functionality I will need to add more pages where it will display
+all information in games list, developer teams list, publishers list, and platforms list.  And at the same time,  I also need to add user's registry and login where it will allow user
+to be able to registry/log in my website.
