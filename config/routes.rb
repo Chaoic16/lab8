@@ -1,5 +1,5 @@
 SampleApp110811::Application.routes.draw do
-  root :to => 'pages#default'
+  root :to => 'pages#home'
   
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
