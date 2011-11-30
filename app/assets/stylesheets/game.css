@@ -1,5 +1,5 @@
 body {
-	background-color: silver;
+	background-color: #3E3535;
 }
 #para {
 	margin-left: 100px;
@@ -17,8 +17,7 @@ body {
 	border-width: 5px;
 	border-style: groove;
 }
-#leftBanner{
-	background-image:url('banner1.jpg');
+#leftBanner{	
 	background-position: left;
 	height: 165px;
 	top: 0px;
@@ -28,7 +27,7 @@ body {
 }
 #rightBanner{
 	float: right;
-	background-color: #FFFF99;
+	background-color: #999999;
 	width: 300px;
 	height: 165px;
 	border-top-width: 0px;
@@ -67,7 +66,7 @@ body {
 	height: 900px;
 }
 #Bottom{
-	background-color: #FF9966;
+	background-color: #999999;
 	margin: auto;
 	width: 1430px;
 	height: 100px;
