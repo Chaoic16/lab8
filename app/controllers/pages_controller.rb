@@ -31,6 +31,10 @@ class PagesController < ApplicationController
     @title = "Feedback"
   end
   
+  def registry
+    @title = "Registry"
+  end
+  
   def help
     @title = "Help"
   end

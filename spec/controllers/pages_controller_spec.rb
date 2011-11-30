@@ -100,7 +100,19 @@ describe PagesController do
     end
   end
   
-    describe "GET 'help'" do
+  describe "GET 'registry'" do
+    it "returns http success" do
+      get 'registry'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'registry'
+      response.should have_selector("title", :content => "Registry")
+    end
+  end
+  
+  describe "GET 'help'" do
     it "returns http success" do
       get 'help'
       response.should be_success
@@ -111,5 +123,4 @@ describe PagesController do
       response.should have_selector("title", :content => "Help")
     end
   end
-
 end

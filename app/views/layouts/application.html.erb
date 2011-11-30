@@ -35,15 +35,21 @@
 				<form name="login" id="login">
 					<table>
 						<tr>
-							<td> login name </td>					
+							<td> <b>login name</b> </td>					
 							<td> <input type="text" name="firstname" id="firstname" size="25" /> </td>
 						</tr>
 						<tr>
-							<td> password </td>
+							<td> <b>password</b> </td>
 							<td> <input type="text" name="middlename" id="middlename" size="25" /> </td>
 						</tr>
 					</table>
-					<label>| <font color="blue"> Registry </font><lable> | </lable></label><font color="blue"> forgot password </font>
+					<hr />
+					<footer>
+						<ul>
+							<li><%= link_to "Registry", "#" %></li>
+							<li><%= link_to "Forgot password", "#" %></li>
+						</ul>
+					</footer>
 				</form>				
 			</div> <!-- End Right Banner -->			
 		</div> <!-- End Left Banner -->		

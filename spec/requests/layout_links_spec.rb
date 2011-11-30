@@ -7,14 +7,44 @@ describe "LayoutLinks" do
       response.should have_selector("title", :content => "Home")
     end
   
-     it "should have a contact page at '/contact'" do
+    it "should have a contact page at '/contact'" do
       get '/contact'
       response.should have_selector("title", :content => "Contact")
     end
     
-     it "should have an about page at '/about'" do
+    it "should have an about page at '/about'" do
       get '/about'
       response.should have_selector("title", :content => "About")
+    end
+    
+    it "should have a help page at '/game'" do
+      get '/help'
+      response.should have_selector("title", :content => "Game List")
+    end
+    
+    it "should have a help page at '/developer'" do
+      get '/help'
+      response.should have_selector("title", :content => "Developer Team List")
+    end
+    
+    it "should have a help page at '/publisher'" do
+      get '/help'
+      response.should have_selector("title", :content => "Publisher List")
+    end
+    
+    it "should have a help page at '/platform'" do
+      get '/help'
+      response.should have_selector("title", :content => "Platform List")
+    end
+    
+    it "should have a help page at '/feedback'" do
+      get '/help'
+      response.should have_selector("title", :content => "Feedback")
+    end
+    
+    it "should have a help page at '/registry'" do
+      get '/help'
+      response.should have_selector("title", :content => "Registry")
     end
     
     it "should have a help page at '/help'" do
