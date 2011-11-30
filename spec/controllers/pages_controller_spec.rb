@@ -14,7 +14,7 @@ describe PagesController do
       get 'home'
       response.should have_selector("title", :content => "Home")
     end
-  end
+  endrspec spec
 
   describe "GET 'contact'" do
     it "returns http success" do
@@ -37,6 +37,66 @@ describe PagesController do
     it "should have the right title" do
       get 'about'
       response.should have_selector("title", :content => "About")
+    end
+  end
+  
+  describe "GET 'game'" do
+    it "returns http success" do
+      get 'game'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'game'
+      response.should have_selector("title", :content => "Game List")
+    end
+  end
+  
+  describe "GET 'develpoer'" do
+    it "returns http success" do
+      get 'developer'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'developer'
+      response.should have_selector("title", :content => "Developer Team List")
+    end
+  end
+  
+  describe "GET 'publisher'" do
+    it "returns http success" do
+      get 'publisher'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'publisher'
+      response.should have_selector("title", :content => "Publisher List")
+    end
+  end
+  
+  describe "GET 'platform'" do
+    it "returns http success" do
+      get 'platform'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'platform'
+      response.should have_selector("title", :content => "Platform List")
+    end
+  end
+  
+  describe "GET 'feedback'" do
+    it "returns http success" do
+      get 'feedback'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'feedback'
+      response.should have_selector("title", :content => "Feedback")
     end
   end
   

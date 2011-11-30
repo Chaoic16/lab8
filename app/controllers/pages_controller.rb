@@ -11,6 +11,26 @@ class PagesController < ApplicationController
     @title = "About"
   end
   
+  def game
+    @title = "Game List"
+  end
+  
+  def developer
+    @title = "Developer Team List"
+  end
+  
+  def publisher
+    @title = "Publisher List"
+  end
+  
+  def platform
+    @title = "Platform List"
+  end
+  
+  def feedback
+    @title = "Feedback"
+  end
+  
   def help
     @title = "Help"
   end

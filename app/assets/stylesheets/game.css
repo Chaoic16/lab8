@@ -75,3 +75,21 @@ body {
 	border-width: 5px;
 	border-style: groove;
 }
+footer ul {
+margin: 0px;
+padding: 0px;
+}
+footer ul li {
+list-style-type: none;
+display: inline-block;
+padding: 0.2em 0;
+}
+footer ul li {
+padding: 0 5px;
+font-weight: bold;
+}
+.round {
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
