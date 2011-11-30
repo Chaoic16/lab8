@@ -108,7 +108,19 @@ describe PagesController do
 
     it "should have the right title" do
       get 'registry'
-      response.should have_selector("title", :content => "Registry")
+      response.should have_selector("title", :content => "Registration")
+    end
+  end
+  
+  describe "GET 'forgot'" do
+    it "returns http success" do
+      get 'forgot'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'forgot'
+      response.should have_selector("title", :content => "Forgot password")
     end
   end
   

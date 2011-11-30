@@ -32,7 +32,11 @@ class PagesController < ApplicationController
   end
   
   def registry
-    @title = "Registry"
+    @title = "Registration"
+  end
+  
+  def forgot
+    @title = "Forgot password"
   end
   
   def help

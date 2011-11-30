@@ -44,7 +44,12 @@ describe "LayoutLinks" do
     
     it "should have a help page at '/registry'" do
       get '/help'
-      response.should have_selector("title", :content => "Registry")
+      response.should have_selector("title", :content => "Registration")
+    end
+    
+    it "should have a help page at '/forgot'" do
+      get '/help'
+      response.should have_selector("title", :content => "Forgot password")
     end
     
     it "should have a help page at '/help'" do

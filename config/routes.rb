@@ -10,6 +10,7 @@ SampleApp110811::Application.routes.draw do
   match '/platform', :to => 'pages#platform'
   match '/feedback', :to => 'pages#feedback'
   match '/registry', :to => 'pages#registry'
+  match '/forgot', :to => 'pages#forgot'
   match '/signup', :to => 'users#new'
 
   # The priority is based upon order of creation:
