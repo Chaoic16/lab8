@@ -18,37 +18,37 @@ describe "LayoutLinks" do
     end
     
     it "should have a help page at '/game'" do
-      get '/help'
+      get '/game'
       response.should have_selector("title", :content => "Game List")
     end
     
     it "should have a help page at '/developer'" do
-      get '/help'
+      get '/developer'
       response.should have_selector("title", :content => "Developer Team List")
     end
     
     it "should have a help page at '/publisher'" do
-      get '/help'
+      get '/publisher'
       response.should have_selector("title", :content => "Publisher List")
     end
     
     it "should have a help page at '/platform'" do
-      get '/help'
+      get '/platform'
       response.should have_selector("title", :content => "Platform List")
     end
     
     it "should have a help page at '/feedback'" do
-      get '/help'
+      get '/feedback'
       response.should have_selector("title", :content => "Feedback")
     end
     
     it "should have a help page at '/registry'" do
-      get '/help'
+      get '/registry'
       response.should have_selector("title", :content => "Registration")
     end
     
     it "should have a help page at '/forgot'" do
-      get '/help'
+      get '/forgot'
       response.should have_selector("title", :content => "Forgot password")
     end
     
@@ -63,16 +63,30 @@ describe "LayoutLinks" do
 # end
     
     it "should have the right links on the layout" do
-      visit root_path
-      response.should have_selector('title', :content => "Home")
-      click_link "About"
-      response.should have_selector('title', :content => "About")
+      visit root_path      
+      response.should have_selector('title', :content => "Home")                  
       click_link "Contact"
       response.should have_selector('title', :content => "Contact")
+      click_link "About"      
+      response.should have_selector('title', :content => "About")      
+      click_link "Game List"
+      response.should have_selector('title', :content => "Game List")      
+      click_link "Developer Team List"
+      response.should have_selector('title', :content => "Developer Team List")      
+      click_link "Publisher List"
+      response.should have_selector('title', :content => "Publisher List")      
+      click_link "Platform List"
+      response.should have_selector('title', :content => "Platform List")      
+      click_link "Feedback"
+      response.should have_selector('title', :content => "Feedback")      
+      click_link "Registration"
+      response.should have_selector('title', :content => "Registration")
+      click_link "Forgot password"
+      response.should have_selector('title', :content => "Forgot password")
       click_link "Home"
       response.should have_selector('title', :content => "Home")
-      click_link "Sign up now"
- # response.should have_selector('title', :content => "Sign up")
+      #click_link "Sign up now"
+      #response.should have_selector('title', :content => "Sign up")
       response.should have_selector('a[href="/"]>img')
     end
 end

@@ -14,7 +14,7 @@ describe PagesController do
       get 'home'
       response.should have_selector("title", :content => "Home")
     end
-  endrspec spec
+  end
 
   describe "GET 'contact'" do
     it "returns http success" do
