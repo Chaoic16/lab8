@@ -16,22 +16,7 @@
 			<%= render 'layouts/header' %>
 			<!---------------------------------- Right Banner ---------------------------------->
 			<div id="rightBanner">
-				<center><h3><script type="text/javascript"> 
-					var currentTime = new Date()
-					var month = currentTime.getMonth() + 1
-					var day = currentTime.getDate()
-					var year = currentTime.getFullYear()					
-					var hours = currentTime.getHours()
-					var minutes = currentTime.getMinutes()
-					if (minutes < 10)
-						minutes = "0" + minutes
-					document.write(month + "/" + day + "/" + year + " \| " + hours + ":" + minutes + " ")
-					if(hours > 11)
-						document.write("PM")
-					else
-						document.write("AM")
-				</script></h3></center>
-				<hr />
+				<br />
 				<form name="login" id="login">
 					<table>
 						<tr>
@@ -41,6 +26,9 @@
 						<tr>
 							<td> <b>password</b> </td>
 							<td> <input type="text" name="middlename" id="middlename" size="25" /> </td>
+						</tr>
+						<tr>
+							<td><input type="submit" id="login" value="Login" /></td>
 						</tr>
 					</table>
 					<hr />
@@ -93,9 +81,25 @@
 			</table>
 			<table>
 				<tr>
-					<td><input type="submit" id="search" /></td>
+					<td><input type="submit" id="search" value="Search" /></td>
 				</tr>
 			</table>
+			<hr />
+			<center><h3><script type="text/javascript"> 
+					var currentTime = new Date()
+					var month = currentTime.getMonth() + 1
+					var day = currentTime.getDate()
+					var year = currentTime.getFullYear()					
+					var hours = currentTime.getHours()
+					var minutes = currentTime.getMinutes()
+					if (minutes < 10)
+						minutes = "0" + minutes
+					document.write(month + "/" + day + "/" + year + " \| " + hours + ":" + minutes + " ")
+					if(hours > 11)
+						document.write("PM")
+					else
+						document.write("AM")
+				</script></h3></center>
 		</div> <!-- end Left Section -->
 		<!---------------------------------- Main ---------------------------------->
 		<div id="main">
