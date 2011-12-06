@@ -69,24 +69,24 @@ describe "LayoutLinks" do
       response.should have_selector('title', :content => "Contact")
       click_link "About"      
       response.should have_selector('title', :content => "About")      
-      click_link "Game List"
-      response.should have_selector('title', :content => "Game List")      
-      click_link "Developer Team List"
-      response.should have_selector('title', :content => "Developer Team List")      
-      click_link "Publisher List"
-      response.should have_selector('title', :content => "Publisher List")      
-      click_link "Platform List"
-      response.should have_selector('title', :content => "Platform List")      
+      click_link "Games List"
+      response.should have_selector('title', :content => "Game List")
+      click_link "Developer Teams List"
+      response.should have_selector('title', :content => "Developer Team List")
+      click_link "Publishers List"
+      response.should have_selector('title', :content => "Publisher List")
+      click_link "Platforms List"
+      response.should have_selector('title', :content => "Platform List")
       click_link "Feedback"
-      response.should have_selector('title', :content => "Feedback")      
+      response.should have_selector('title', :content => "Feedback")
       click_link "Registration"
       response.should have_selector('title', :content => "Registration")
       click_link "Forgot password"
       response.should have_selector('title', :content => "Forgot password")
-      click_link "Home"
+      click_link "News"
       response.should have_selector('title', :content => "Home")
       #click_link "Sign up now"
       #response.should have_selector('title', :content => "Sign up")
-      response.should have_selector('a[href="/"]>img')
+      #response.should have_selector('a[href="/banner.JPG"]>img')
     end
 end
