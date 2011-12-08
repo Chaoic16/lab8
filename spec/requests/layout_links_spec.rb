@@ -42,11 +42,6 @@ describe "LayoutLinks" do
       response.should have_selector("title", :content => "Feedback")
     end
     
-    it "should have a help page at '/registry'" do
-      get '/registry'
-      response.should have_selector("title", :content => "Registration")
-    end
-    
     it "should have a help page at '/forgot'" do
       get '/forgot'
       response.should have_selector("title", :content => "Forgot password")
@@ -56,11 +51,10 @@ describe "LayoutLinks" do
       get '/help'
       response.should have_selector("title", :content => "Help")
     end
-    
-# it "should have a sign-up page at '/signup'" do
-# get '/signup'
-# response.should have_selector("title", :content => "Sign up")
-# end
+    it "should have a sign-up page at '/signup'" do
+    get '/signup'
+    response.should have_selector("title", :content => "Registration")
+    end
     
     it "should have the right links on the layout" do
       visit root_path      
@@ -79,14 +73,12 @@ describe "LayoutLinks" do
       response.should have_selector('title', :content => "Platform List")
       click_link "Feedback"
       response.should have_selector('title', :content => "Feedback")
-      click_link "Registration"
-      response.should have_selector('title', :content => "Registration")
       click_link "Forgot password"
       response.should have_selector('title', :content => "Forgot password")
       click_link "News"
       response.should have_selector('title', :content => "Home")
-      #click_link "Sign up now"
-      #response.should have_selector('title', :content => "Sign up")
+      click_link "Registration"
+      response.should have_selector('title', :content => "Registration")
       #response.should have_selector('a[href="/banner.JPG"]>img')
     end
 end

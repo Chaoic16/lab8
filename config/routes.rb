@@ -12,7 +12,6 @@ SampleApp110811::Application.routes.draw do
   match '/publisher', :to => 'pages#publisher'
   match '/platform', :to => 'pages#platform'
   match '/feedback', :to => 'pages#feedback'
-  match '/registry', :to => 'pages#registry'
   match '/forgot', :to => 'pages#forgot'
   match '/signup', :to => 'users#new'
 

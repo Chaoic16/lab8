@@ -5,8 +5,8 @@ describe User do
     @attr = {
       :name => "Chaotic16", 
       :email => "Chaotic16@example.com",
-      :password => "dragon",
-      :password_confirmation => "dragon"
+      :password => "dragon16",
+      :password_confirmation => "dragon16"
     }
   end
   
@@ -76,6 +76,8 @@ describe User do
     end
   end
   
+  #----------------------------------------------------------------------------
+  # Added from book chapter 7.2
   describe "password encryption" do
     before(:each) do
       @user = User.create!(@attr)
@@ -98,5 +100,23 @@ describe User do
         @user.has_password?(@attr[:password]).should be_false
       end
     end
+    
+    describe "authentic method" do
+      it "should return nill on email/password mismatch" do
+        wrong_password_user = User.authenticate(@attr[:email], "wrongpass")
+        wrong_password_user.should be_nil
+      end
+      
+      it "should return nil for an email address with no user" do
+        nonexistent_user = User.authenticate("bar@foo.com", @attr[:password])
+        nonexistent_user.should be_nil
+      end
+      
+      it "should return the user on email/password match" do
+        matching_user = User.authenticate(@attr[:email], @attr[:password])
+        matching_user.should == @user
+      end
+    end
   end
+  #----------------------------------------------------------------------------
 end

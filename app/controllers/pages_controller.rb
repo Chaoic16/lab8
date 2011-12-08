@@ -31,10 +31,6 @@ class PagesController < ApplicationController
     @title = "Feedback"
   end
   
-  def registry
-    @title = "Registration"
-  end
-  
   def forgot
     @title = "Forgot password"
   end
@@ -45,6 +41,6 @@ class PagesController < ApplicationController
   
   def new
     @user = User.new
-    @title="Sign up"
+    @title = "Registration"
   end
 end

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def new # responds to get /users/new by rendering new.html.erb
-    @title = "Registry"
+    @title = "Registration"
     @user = User.new
   end
   
